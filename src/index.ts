@@ -45,16 +45,12 @@ bobAgent.setInboundTransporter(
 );
 bobAgent.setOutboundTransporter(new HttpOutboundTransporter());
 
-async function run() {
-  await aliceAgent.initialize();
-  await bobAgent.initialize();
+await aliceAgent.initialize();
+await bobAgent.initialize();
 
-  const { invitation } = await aliceAgent.connections.createConnection();
-  const bobAliceConnection = await bobAgent.connections.receiveInvitation(
-    invitation
-  );
+const { invitation } = await aliceAgent.connections.createConnection();
+const bobAliceConnection = await bobAgent.connections.receiveInvitation(
+  invitation
+);
 
-  console.log("Done");
-}
-
-run();
+console.log("Done");
