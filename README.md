@@ -3,6 +3,6 @@
 ## Running
 
 ```sh
-docker build -t afj-demo .
-docker run afj-demo
+docker build -t afj-demo . --platform linux/amd64
+docker run --rm -it --name afj-demo afj-demo
 ```

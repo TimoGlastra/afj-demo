@@ -12,6 +12,7 @@
     "@aries-framework/node": "^0.1.0-alpha.251"
   },
   "devDependencies": {
+    "@types/node": "^16.6.2",
     "ts-node": "^10.2.1",
     "typescript": "^4.3.5"
   }
